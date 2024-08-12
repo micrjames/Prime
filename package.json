@@ -1,7 +1,7 @@
 {
-  "name": "fibonacci",
+  "name": "primes",
   "version": "1.0.0",
-  "description": "A fibonacci generator.",
+  "description": "A prime number generator.",
   "main": "index.js",
    "directories": {
     "test": "tests"

@@ -1,21 +1,31 @@
 import { IteratorResult } from "./iters";
+import { isPrime } from "./isPrimes";
 
 export class Primes implements IterableIterator<number> {
-   protected num1: number;
-   protected num2: number;
-   protected it: number;
+   protected current: number;
    protected n: number;
+   protected it: number;
 
-   constructor(n: number, num1: number = 0, num2: number = 1) {
-	  this.num1 = num1;
-	  this.num2 = num2;
-	 
-	  this.it = 0;
+   constructor(n: number, start: number = 2) {
+	  this.current = start - 1;
 	  this.n = n;
+	  this.it = 0;
    }
 
    public next(): IteratorResult<number> {
 	  if(this.n) {
+		 while(!isPrime(++this.current)) {}
+		 this.it++;
+		 if(this.it > this.n) {
+			return {
+			   done: true,
+			   value: null
+			};
+		 }
+		 return {
+			done: false,
+			value: this.current
+		 };
 	  } else
 		 throw new Error("NO upper bound specified.");
    }
