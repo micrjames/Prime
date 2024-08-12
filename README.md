@@ -1,4 +1,4 @@
-# Prime
+# Primes
 A Prime number generator.
 
 ## Table Of Contents
