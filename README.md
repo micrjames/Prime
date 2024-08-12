@@ -34,13 +34,13 @@ The code from the project will be largely executed through the testing of the co
 
 To use in a project, instaniate the class.
 ```
-    const primes: Prime = Prime(10);
+    const primes: Primes = Primes(10);
 ```
 , which gives the first *ten* numbers of the sequence starting with *2*.
 
 Alternatively, we can start with any other starting number, here n.
 ```
-    const fib: Fibonacci = new Fibonacci(10, n);
+    const primes: Primes = new Primes(10, n);
 ```
 
 To obtain the values of the sequence, we can get an array of the sequence, by
@@ -55,11 +55,11 @@ Alternatively, we can get each value sequentially. From the first example, above
 ```
 gives the number *2*.
 ```
-    fib.next().value
+    primes.next().value
 ```
 gives the number *3*.
 ```
-    fib.next().value
+    primes.next().value
 ```
 gives the number *5*.
 
